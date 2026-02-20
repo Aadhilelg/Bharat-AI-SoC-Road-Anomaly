@@ -1,11 +1,12 @@
-# Road Anomaly Detection (Bharat AI-SoC 2026)
+# Road Anomaly Detection - Bharat AI-SoC 2026
 
-## Implementation Details
-* **Inference Engine:** LiteRT (TensorFlow Lite) using XNNPACK CPU Delegate.
-* **Architecture:** 64-bit (aarch64) optimization for Raspberry Pi 4.
-* **Optimization:** Headless OpenCV deployment and asynchronous GPIO threading for low-latency alerts.
+## Optimization & Performance
+* **SoC Acceleration:** Implemented using LiteRT with the XNNPACK CPU delegate for the Broadcom BCM2711 SoC.
+* **Headless Deployment:** Used `opencv-python-headless` to eliminate display server overhead, maximizing resources for AI inference.
+* **Throughput:** ~6.9 FPS achieved on a 64-bit architecture.
 
-## Performance Metrics
-* **Throughput:** ~6.9 FPS
-* **Latency:** ~145ms
+## Hardware Integration
+* **Buzzer:** Physical Pin 12 (GPIO 18)
+* **LED:** Physical Pin 18 (GPIO 24)
+* **Power/Cooling:** Physical Pin 2 (5V) and Physical Pin 6 (GND)
 * 
